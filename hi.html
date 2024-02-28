@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello</title>
+
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #question {
+      text-align: center;
+    }
+
+    #buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #yes,
+    #no {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 10px; /* Added margin to create space between buttons */
+    }
+
+    #yes {
+      background: lightgreen;
+    }
+
+    #no {
+      background: pink;
+      position: relative;
+    }
+
+    #dance {
+      display: none;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="question">
+    <h1>Outing on Sunday or Monday?</h1>
+    <div id="buttons">
+      <div id="yes">Yes</div>
+      <div id="no">No</div>
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.getElementById('no');
+    const yesButton = document.getElementById('yes');
+    const dance = document.getElementById('dance');
+
+    noButton.addEventListener('click', () => {
+      const x = Math.floor(Math.random() * 300) - 150;
+      const y = Math.floor(Math.random() * 300) - 150;
+      noButton.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    yesButton.addEventListener('click', () => {
+      
+      const phoneNumber = '7702273678';
+      window.location.href = `tel:${phoneNumber}`;
+    });
+  </script>
+
+</body>
+
+</html>
